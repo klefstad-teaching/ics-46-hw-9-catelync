@@ -7,11 +7,11 @@ void error(string word1, string word2, string msg)
 }
 
 // is adj
-bool is_adjacent(const string& word1, const string& word2)
+bool edit_distance_within(const std::string& str1, const std::string& str2, int d)
 {
     int len1 = word1.length();
     int len2 = word2.length();
-    if (abs(len1 - len2) > 1)
+    if (abs(len1 - len2) > d)
     {
         return false;
     }
@@ -20,9 +20,9 @@ bool is_adjacent(const string& word1, const string& word2)
     int j = 0;
     while (i < len1 && j < len2)
     {
-        if (word1[i] != word2[j])
+        if (str1[i] != str2[j])
         {
-            if (++diff_count > 1)
+            if (++diff_count > d)
             {
                 return false;
             }
