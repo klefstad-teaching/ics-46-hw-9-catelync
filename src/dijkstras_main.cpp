@@ -7,4 +7,7 @@ int main(int argc, char * argv[])
         cerr << "Usage: " << argv[0] << " <input _file> <start_vertex>" << endl;
         return 1; 
     }
+
+    string filename = argv[1];
+    int start_vertex = stoi(argv[2]); 
 }
