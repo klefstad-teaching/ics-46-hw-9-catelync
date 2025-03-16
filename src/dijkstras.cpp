@@ -1,7 +1,7 @@
 # include "dijkstras.h"
 
 // implement dij given source vertex 
-vector<int> dijkstras_shortest_path(const Graph& G, int source, vector<int>& previous)
+vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& previous)
 {
     int n = G.numVertices;
     vector<int> distances(n, INF);

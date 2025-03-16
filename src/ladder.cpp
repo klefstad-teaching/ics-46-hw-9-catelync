@@ -124,3 +124,11 @@ void print_word_ladder(const vector<string>& ladder)
     }
     cout << endl; 
 }
+
+// verify
+void verify_word_ladder()
+{
+    set<string> word_list = {"hit", "hot", "dot", "cog", "lot", "log"};
+    vector<string> ladder = generate_word_ladder("hit", "cog", word_list);
+    print_word_ladder(ladder);
+}
