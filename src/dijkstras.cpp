@@ -3,7 +3,7 @@
 // implement dij given source vertex 
 vector<int> dijkstras_shortest_path(const Graph& G, int source, vector<int>& previous)
 {
-    int n = G.numVerticies;
+    int n = G.numVertices;
     vector<int> distances(n, INF);
     vector<bool> visited(n, false);
     previous.assign(n, -1);
