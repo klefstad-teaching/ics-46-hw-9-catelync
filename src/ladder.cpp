@@ -1,5 +1,11 @@
 # include "ladder.h"
 
+// error
+void error(string word1, string word2, string msg)
+{
+    cerr << "Error: " << msg << " (" << word1 <<< ", " << word2 << ")" << endl;
+}
+
 // is adj
 bool is_adjacent(const string& word1, const string& word2)
 {
