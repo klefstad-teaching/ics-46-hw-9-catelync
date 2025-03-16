@@ -16,8 +16,20 @@ int main(int argc, char * argv[])
     {
         file_to_graph(filename, G);
     }
-    catch
+    catch (const exception&)
     {
-        
+        cerr << "Error: Unable to process input file" << endl;
+        return 1; 
     }
+
+    vector<int> previous;
+    vector<int> distances = dijkstras_shortest_path(G, start_vertex, previous);
+
+    for (int i = 0; i < G.numVertices; ++i)
+    {
+        cout << "Shortest path to vertex " << i << ": ";
+        vector<int> path = extract_shortest_path(distances, previous, i);
+        print_path(path, distances[i]);
+    }
+    return 0; 
 }
