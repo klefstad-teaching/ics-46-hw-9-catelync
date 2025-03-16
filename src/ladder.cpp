@@ -62,6 +62,11 @@ vector<string> generate_word_ladder(const string& begin_word, const string& end_
         cerr << "Error: Start and end words must be different." << endl;
         return {};
     }
+    if (word_list.find(end_word) == word_list.end())
+    {
+        cerr << "Error: End word is not in the dictionary." << endl; 
+        return {};
+    }
     queue<vector<string>> ladders;
     ladders.push({begin_word});
     set<string> visited;
