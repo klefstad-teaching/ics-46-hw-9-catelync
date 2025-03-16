@@ -10,4 +10,14 @@ int main(int argc, char * argv[])
 
     string filename = argv[1];
     int start_vertex = stoi(argv[2]); 
+
+    Graph G;
+    try 
+    {
+        file_to_graph(filename, G);
+    }
+    catch
+    {
+        
+    }
 }
