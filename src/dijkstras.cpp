@@ -38,5 +38,19 @@ vector<int> dijkstras_shortest_path(const Graph& G, int source, vector<int>& pre
 }
 
 // get the shortest path from the source to given dest
+vector<int> extract_shortest_path(const vector<int>& distances, const vector<int>& previous, int destination)
+{
+    vector<int> path;
+    if (previous[destination] == -1 && destination != 0)
+    {
+        return path; 
+    }
+    for (int at = destination; at != -1; at = previous[at])
+    {
+        path.push_back(at);
+    }
+    reverse(path.begin(), path.end());
+    return path; 
+}
 
 // print shortest path and total cost
