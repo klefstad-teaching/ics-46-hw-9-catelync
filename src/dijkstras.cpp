@@ -54,7 +54,7 @@ vector<int> extract_shortest_path(const vector<int>& /*distances*/, const vector
 }
 
 // print shortest path and total cost
-void print_path(const vector<int>& path, int total)
+void print_path(const vector<int>& path, int total_cost)
 {
     if (path.empty())
     {
@@ -69,5 +69,5 @@ void print_path(const vector<int>& path, int total)
             cout << " -> ";
         }
     }
-    cout << "\nTotal cost: " << total << endl; 
+    cout << "\nTotal cost: " << total_cost << endl; 
 }
