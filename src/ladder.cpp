@@ -3,14 +3,14 @@
 // error
 void error(string word1, string word2, string msg)
 {
-    cerr << "Error: " << msg << " (" << word1 <<< ", " << word2 << ")" << endl;
+    cerr << "Error: " << msg << " (" << word1 << ", " << word2 << ")" << endl;
 }
 
 // is adj
 bool edit_distance_within(const std::string& str1, const std::string& str2, int d)
 {
-    int len1 = word1.length();
-    int len2 = word2.length();
+    int len1 = str1.length();
+    int len2 = str2.length();
     if (abs(len1 - len2) > d)
     {
         return false;
@@ -67,7 +67,8 @@ vector<string> generate_word_ladder(const string& begin_word, const string& end_
         set<string> level_visited;
         while (level_size--)
         {
-            vector<string> path = ladders.front(); ladders.pop();
+            vector<string> path = ladders.front(); 
+            ladders.pop();
             string last_word = path.back();
             if (last_word == end_word)
             {
