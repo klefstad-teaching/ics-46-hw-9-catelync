@@ -49,6 +49,11 @@ bool edit_distance_within(const std::string& str1, const std::string& str2, int 
     return true; 
 }
 
+bool is_adjacent(const string& word1, const string& word2)
+{
+    return edit_distance_within(word1, word2, 1);
+}
+
 // gen word ladder
 vector<string> generate_word_ladder(const string& begin_word, const string& end_word, const set<string>& word_list)
 {
