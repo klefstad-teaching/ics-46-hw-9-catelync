@@ -91,11 +91,10 @@ vector<string> generate_word_ladder(const string& begin_word, const string& end_
                     vector<string> new_path = path;
                     new_path.push_back(word);
                     ladders.push(new_path);
-                    level_visited.insert(word);
+                    visited.insert(word);
                 }
             }
         }
-        visited.insert(level_visited.begin(), level_visited.end());
     }
     return {};
 }
