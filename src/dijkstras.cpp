@@ -59,7 +59,7 @@ void print_path(const vector<int>& path, int total_cost)
     if (path.empty() && total_cost > 0)
     {
         cout << "\nTotal cost is " << total_cost << "\n";
-        reutrn; 
+        return; 
     }
     if (path.empty())
     {
