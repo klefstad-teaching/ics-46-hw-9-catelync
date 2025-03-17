@@ -22,7 +22,7 @@ vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& prev
         }
         visited[u] = true;
 
-        for (const Edge& edge : G.adjacencyList[u])
+        for (const Edge& edge : G[u])
         {
             int v = edge.dst;
             int weight = edge.weight;
@@ -69,5 +69,5 @@ void print_path(const vector<int>& path, int total_cost)
             cout << " ";
         }
     }
-    cout << "\nTotal cost: " << total_cost << endl; 
+    cout << "\nTotal cost is " << total_cost << endl; 
 }
